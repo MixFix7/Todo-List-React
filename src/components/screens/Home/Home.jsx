@@ -19,7 +19,7 @@ const data = [
   },
   {
     _id: '4',
-    title: 'Give a food for cat',
+    title: 'Feed the cat',
     isComleted: false,
   },
 ]
