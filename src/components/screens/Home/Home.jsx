@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TodoItem from './item/TodoItem';
+import CreateTodoField from './CreateTodo-field/CreateTodoField';
 
 const data = [
   {
@@ -38,6 +39,16 @@ const Home = () => {
     setTodos([...todos].filter(t => t._id !== id))
   }
 
+  const addTodo = (title) => {
+    setTodos([{
+      _id: new Date(),
+      title,
+      isComleted: false,
+    },
+    ...todos, ]) 
+  }
+
+  window.addTodo = addTodo
 
   return (
     <div className='h-screen text-white w-4/5 mx-auto'>
@@ -51,6 +62,8 @@ const Home = () => {
         />
         
     ))}
+
+    <CreateTodoField/>
 
     </div>
   
