@@ -1,13 +1,14 @@
 import React from 'react'
-import {BsCheck} from 'react-icons/bs'
+import { BsCheck } from 'react-icons/bs'
 import Check from './Check'
 
-const TodoItem = ({todo}) => {
+const TodoItem = ({todo, changeTodo}) => {
   return (
-    <div>
+    <button className='flex items-center mb-4 rounded-2xl
+     bg-zinc-800 p-5 w-full' onClick={() => changeTodo(todo._id)}>
     <Check/>
       {todo.title}
-    </div>
+    </button>
   )
 }
 
